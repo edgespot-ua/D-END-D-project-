@@ -1,0 +1,73 @@
+/* Основні стилі */
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Хедер */
+.header {
+
+    background-size: cover; /* Це дозволяє зображенню заповнити весь контейнер */
+    background-position: center; /* Центрує зображення */
+    height: 70px; /* Висота хедера (можна змінити на свою) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    position: fixed; /* Закріплює хедер */
+    top: 0; /* Встановлює хедер на верх сторінки */
+    left: 0;
+    width: 100%; /* Ширина хедера на всю сторінку */
+    z-index: 1000; /* Забезпечує, що хедер буде на передньому плані */
+    transition: background-color 0.4s ease, box-shadow 0.4s ease; /* Плавна зміна фону та тіні */
+}
+.header.scrolled {
+    background-color: rgba(37, 37, 37, 0.4); /* Напівпрозорий чорний фон */
+}
+
+/* Верхня частина хедера */
+.header-top {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px; /* Відступ від верхнього краю */
+}
+
+/* Меню навігації */
+.nav {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  20px 40px;
+/*    border-top: 1px solid rgb(255, 255, 255);*/
+
+position: relative; /* Щоб `.header-top` позиціонувалася відносно `nav` */
+   
+    
+}
+
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li {
+    display: inline;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.search-icon {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+

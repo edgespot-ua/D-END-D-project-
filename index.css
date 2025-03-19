@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Istok Web", sans-serif;
+    background-color: #ffffff;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+.img-nb-runner{
+    width: 1550px;
+    height: auto; /* Зберігає пропорції */
+    
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge Spot</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+
+<body>
+
+    <header class="header">
+        
+        
+        <nav class="nav">
+            
+            <ul>
+                <li><a href="#">ЧОЛОВІКАМ <i class='bx bx-chevron-down'></i></a></li>
+                <li><a href="#">ЖІНКАМ <i class='bx bx-chevron-down'></i></a></li>
+                <li><a href="#">БРЕНДИ </a></li>
+            </ul>
+            <div class="header-top">
+                <p class="logo">EDGE SPOT</p>
+            </div>
+            <div class="search-icon">
+                <i class='bx bx-search' style='color:#ffffff'  ></i>
+            </div>
+        </nav>
+
+   
+    </header>
+
+<main>
+<img  class ="img-nb-runner" src="https://www.newbalance.de/dw/image/v2/AASY_PRD/on/demandware.static/-/Library-Sites-NBUK-NBEU/default/dwa3b30615/images/page-designer/2025/March/RunningTakeover-V1-CompA-Desktop.jpg?sw=1616&sfrm=jpg" alt="">
+<img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/e787443572b547c9bb149a90920cdf30_9366/SL_72_OG_x_Liberty_London_Schuh_Grun_JH7226_01_00_standard.jpg" alt="">
+</main>
+
+<footer>
+
+</footer>
+</body>
+<script>
+    window.addEventListener('scroll', function () {
+    const header = document.querySelector('.header');
+    
+    if (window.scrollY > 0) {
+        // Якщо прокрутили сторінку більше ніж на 0, додаємо клас .scrolled
+        header.classList.add('scrolled');
+    } else {
+        // Якщо скролл на початковій позиції, прибираємо клас
+        header.classList.remove('scrolled');
+    }
+});
+
+</script>
+</html>
