@@ -10,8 +10,13 @@ body {
 }
 
 
-.img-nb-runner{
-    width: 1550px;
-    height: auto; /* Зберігає пропорції */
-    
+
+
+.img-nb-runner {
+    width: 100vw; /* Ширина на весь екран */
+    height: 100vh; /* Висота на весь екран */
+    object-fit: cover; /* Обрізає зображення без спотворення */
+ 
+    top: 0;
+    left: 0;
 }
