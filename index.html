@@ -24,15 +24,18 @@
                 <i class='bx bx-search'></i>
             </div>
         </nav>
-    
-        <div class="mobile-menu">
-            <ul>
-                <li><a href="#">ЧОЛОВІКАМ</a></li>
-                <li><a href="#">ЖІНКАМ</a></li>
-                <li><a href="#">БРЕНДИ</a></li>
-            </ul>
-        </div>
     </header>
+    
+    <!-- Бургер-меню -->
+    <div class="mobile-menu">
+        <div class="close-menu">&times;</div>
+        <ul>
+            <li><a href="#">ЧОЛОВІКАМ</a></li>
+            <li><a href="#">ЖІНКАМ</a></li>
+            <li><a href="#">БРЕНДИ</a></li>
+        </ul>
+    </div>
+    
     
     
     
@@ -45,48 +48,23 @@
 
 </main>
 
-<footer>
-    <div class="footer-container">
-        <div class="footer-section about">
-            <h3>ПРО НАС</h3>
-            <a href="bxl-instagram">
-                <i class='bx bxl-instagram' style='color:#ffffff'  ></i>
-            </a>
-            
-            <p>Edge Spot – це магазин, який поєднує  <br>
-               моду, спорт та снікер-культуру.</p>
-               <br>
-               
-            <p>Тільки оригінальна продукція від <br>
-               світових брендів.</p>
-        </div>
-        <div class="footer-section info">
-            <h3>ІНФОРМАЦІЯ</h3>
-            <ul>
-                <li><a href="#">Про нас</a></li>
-                <li><a href="#">Контакти</a></li>
-            </ul>
-        </div>
-        <div class="footer-section brands">
-            <h3>БРЕНДИ</h3>
-            <ul>
-                <li><a href="#">Nike</a></li>
-                <li><a href="#">Adidas</a></li>
-                <li><a href="#">Stone Island</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
+
 
 </body>
 <script>
-// script.js
 document.addEventListener("DOMContentLoaded", function() {
     const menuIcon = document.querySelector(".menu-icon");
     const mobileMenu = document.querySelector(".mobile-menu");
+    const closeMenu = document.querySelector(".close-menu");
 
+    // Відкриття меню
     menuIcon.addEventListener("click", function() {
-        mobileMenu.classList.toggle("active");
+        mobileMenu.classList.add("active");
+    });
+
+    // Закриття меню тільки при натисканні на хрестик
+    closeMenu.addEventListener("click", function() {
+        mobileMenu.classList.remove("active");
     });
 });
 
