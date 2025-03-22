@@ -15,7 +15,7 @@ body {
     z-index: 999;
     background-color: transparent; /* Початковий прозорий фон */
     transition: background-color 0.5s ease, box-shadow 0.3s ease; /* Плавна зміна фону та тіні */
-    padding: 10px 20px;
+    padding: 10px 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,7 +39,8 @@ body {
 
 .logo{
     font-size: 15px;
-    
+    margin-right: 300px; /* Забираємо всі зайві відступи */
+    padding-left: 10px; /* Додаємо трохи внутрішнього відступу, щоб не було впритул */
     color: aliceblue;
     padding: 0; /* Прибираємо всі відступи */
 }
@@ -51,14 +52,12 @@ body {
     width: 100%;
     justify-content: space-between;
 }
-.logo {
-    margin-right: 300px; /* Забираємо всі зайві відступи */
-    padding-left: 10px; /* Додаємо трохи внутрішнього відступу, щоб не було впритул */
-}
+
 
 
 /* Меню для ПК */
 .nav-menu {
+  
 text-align: left;
     display: flex;
     gap: 20px;
@@ -67,18 +66,18 @@ text-align: left;
 .nav-menu a {
     text-decoration: none;
     color: rgb(255, 253, 253);
-    font-size: 13.5px;
+    font-size: 13px;
 }
 
 /* Бургер-меню */
 .menu-icon {
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
     display: none;
 }
 
 .search-icon i {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 /* Мобільне бургер-меню */
@@ -113,6 +112,9 @@ text-align: left;
 /* Адаптивність */
 @media (max-width: 768px) {
 
+    .header {
+        padding: 10px 20px;
+    }
     .logo {
         margin-right: 0px; /* Забираємо всі зайві відступи */
         padding-left: 0px; /* Додаємо трохи внутрішнього відступу, щоб не було впритул */

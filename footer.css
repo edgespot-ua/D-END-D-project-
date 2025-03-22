@@ -40,6 +40,11 @@ ul li a {
     text-decoration: none;
 }
 
+.bxl-instagram{
+    font-size: 25px;
+}
+
+
 ul li a:hover {
     color: white;
 }
