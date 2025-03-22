@@ -45,12 +45,28 @@
     <div class="mobile-menu">
         <div class="close-menu">&times;</div>
         <ul>
-            <li><a href="#">ЧОЛОВІКАМ <i class='bx bx-chevron-down'></i></a></li>
-            <li><a href="#">ЖІНКАМ <i class='bx bx-chevron-down'></i></a></li>
+            <li class="has-submenu">
+                <a href="#">ЧОЛОВІКАМ <i class='bx bx-chevron-down'></i></a>
+                <ul class="submenu">
+                    <li><a href="#">- Одяг</a></li>
+                    <li><a href="#">- Взуття</a></li>
+                    <li><a href="#">- Сумки</a></li>
+                    <li><a href="#">- Аксесуари</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#">ЖІНКАМ <i class='bx bx-chevron-down'></i></a>
+                <ul class="submenu">
+                    <li><a href="#">- Одяг</a></li>
+                    <li><a href="#">- Взуття</a></li>
+                    <li><a href="#">- Сумки</a></li>
+                    <li><a href="#">- Аксесуари</a></li>
+                </ul>
+            </li>
             <li><a href="#">БРЕНДИ</a></li>
             <li><a href="#">SALE</a></li>
             <li><a href="#">КОНТАКТИ</a></li>
-        </ul>
+        </ul>   
     </div>
     
     
@@ -129,6 +145,31 @@ window.addEventListener("scroll", function() {
     } else {
         header.classList.remove("scrolled"); // Видаляємо клас scrolled
     }
+});
+
+
+
+
+
+
+// Знайдемо всі елементи, які мають підпункти
+const menuItems = document.querySelectorAll('.has-submenu > a');
+
+menuItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+        const parent = this.parentElement;
+        const submenu = parent.querySelector('.submenu');
+        
+        // Перемикаємо клас для відкриття/закриття підпунктів
+        parent.classList.toggle('open');
+
+        // Закриваємо всі інші підпункти
+        document.querySelectorAll('.has-submenu.open').forEach(otherItem => {
+            if (otherItem !== parent) {
+                otherItem.classList.remove('open');
+            }
+        });
+    });
 });
 
 
